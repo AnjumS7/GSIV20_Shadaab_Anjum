@@ -17,7 +17,6 @@ const List = () => {
     const [searchQuery, setSearchQuery] = useState(' ');
     const [initialFetch, setInitialFetch] = useState(true);
     const {searchEntryData, setSearchEntryData} = useContext(SearchEntryContext);
-    const [newSearch, setNewSearch] = useState(true);
 
 
     const onSearchSubmit = async () => {
@@ -45,6 +44,7 @@ const List = () => {
     }
 
     const onInitialFetch = async () => {
+        setInitialFetch(true);
         const res = await axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=5acad45f4b95196d0a0c063716c82c3f&language=en-US&page=${currentPage}`);
         const newData = res.data.results;
         console.log(res);
@@ -58,9 +58,24 @@ const List = () => {
 
     
 
+    
+    useEffect( async()=> {
+        setCurrentSearchPage(1);
+        setMovieData([]);
+        const data1 = await onSearchSubmit();
+        setMovieData(data1.data.results);
+        }
+        ,[searchQuery])
+
     useEffect(onInitialFetch,[]);
+   
+
+
 
     
+    
+
+    console.log(initialFetch, hasMore)
     
     return(
         <div>
