@@ -18,7 +18,9 @@ c. Things I could have done better :
 
 The state of the data is not persistent. If the page is refreshed, the current state is lost.
 
-When doing consecutive searches without refreshing, the results of the searches appear below the previous results I tried to fix it but it caused some issues. Maybe I could have done better.
+~~When doing consecutive searches without refreshing, the results of the searches appear below the previous results I tried to fix it but it caused some issues. Maybe I could have done better.~~
+
+Resolved the issue where consecutive searches appeared below the previous search results. But now clicking on some movie for details and going back takes us to the beginning of the search results.
 
 I could not find the name of the director, the actors and the movie length in the API response. So I could not display them in the Details page.
 
