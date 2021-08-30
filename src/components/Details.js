@@ -42,18 +42,15 @@ const Details = () => {
                         
                         <p className = "ui container" style = {{marginTop:"10px", fontSize: "1.5em", }}>
                             <span>{selMovie[0].release_date.slice(0,4)}</span>
-                            <span>|</span>
-                            <span>Length</span>
-                            <span>|</span>
-                            <span>Director</span>
+                            
                         </p>
-                        <span className = "ui container" style = {{marginTop:"10px", fontSize: "1.5em", }}>
+                        {/* <span className = "ui container" style = {{marginTop:"10px", fontSize: "1.5em", }}>
                             Cast : 
                             <span>
                                 Actor1, Actor 2, ....
 
                             </span>
-                        </span>
+                        </span> */}
                         <div className = "ui container" style = {{marginTop:"10px", fontSize: "1.5em", }}>
                            Description : {selMovie[0].overview}
                         </div>

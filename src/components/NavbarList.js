@@ -24,7 +24,7 @@ const NavbarLists = (props) => {
         
             <div className = "ui container fluid fixed top sticky">
                 
-                    <div className="ui menu">
+                    <div className="ui inverted menu">
                         <div className="left menu">
                             <form className = "ui form" style = {{marginLeft: "10px"}}onSubmit = {submtitForm}>
                                 <div className = "field">

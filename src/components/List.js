@@ -34,7 +34,8 @@ const List = () => {
     }
 
     const onSearchSubmitNext = async () => {
-        const res = await onSearchSubmit(searchQuery);
+        
+        const res = await onSearchSubmit();
         const newData = res.data.results;
         setMovieData([...movieData, ...newData]);
         if(newData.length == 0 || newData.length < 20) {
